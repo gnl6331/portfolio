@@ -113,6 +113,7 @@ toggleButton.addEventListener('click', function(e) {
   }
 });
 
+// Toggle function for the items
 hiddenMenuItems.forEach(function(element) {
   element.addEventListener('click', function() {
     const cssString = 'display: block; opacity: 1; transform: scale(1, 1); transition: all 0.4s;';
