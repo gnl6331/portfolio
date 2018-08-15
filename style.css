@@ -425,6 +425,7 @@ nav.container::after {
 
   .mobile-menu .container a.toggle {
     font-size: 1.5rem;
+    color: #fff;
   }
 
   /* about section */
