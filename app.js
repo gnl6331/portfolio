@@ -80,33 +80,3 @@ window.onscroll = function() {
     skillsSectionBtn.classList.add('active');
   }
 }
-
-// Toggling menu
-const toggleButton = document.querySelector('.toggle');
-const hiddenMenu = document.querySelector('.menu-items');
-const hiddenMenuItems = Array.from(document.querySelectorAll('.m-menu-item'));
-//const hiddenMenuItemsArray = Array.from(hiddenMenuItems)
-let menuHidden = true;
-
-const toggleMobileMenu = () => {
-  const cssString = 'display: block; opacity: 1; transform: scale(1, 1); transition: all 0.4s;';
-  const cssStringHide = 'display: none; opacity: 0; transform: scale(0, -1);';
-  if(menuHidden) {
-    menuHidden = false;
-    hiddenMenu.style.cssText = cssString;
-  } else {
-    menuHidden = true;
-    hiddenMenu.style.cssText = cssStringHide;
-  }
-}
-
-toggleButton.addEventListener('click', function(e) {
-  e.preventDefault();
-  toggleMobileMenu();
-});
-
-hiddenMenuItems.forEach(function(element) {
-  element.addEventListener('click', function() {
-    toggleMobileMenu();
-  })
-});
