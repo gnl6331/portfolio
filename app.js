@@ -34,6 +34,9 @@ ScrollReveal().reveal('.skills-title', {duration: 750, delay: 250});
 ScrollReveal().reveal('.skills-desc', {duration: 750, delay: 250});
 ScrollReveal().reveal('.skill', slideLeft, {duration: 750, delay: 1000});
 
+ScrollReveal().reveal('.social-section', {duration: 500});
+ScrollReveal().reveal('.social-chan', slideLeft, {duration: 750, delay: 250});
+
 //Smooth Scroll
 var scroll = new SmoothScroll('a[href*="#"]');
 
