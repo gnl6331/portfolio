@@ -16,6 +16,7 @@ var slideLeft = {
   opacity: null
 }
 
+//Scroll Reveal functions
 ScrollReveal().reveal('.main-title', {duration: 1000, delay: 250});
 ScrollReveal().reveal('.main-subtitle', {duration: 1000, delay: 1000});
 
@@ -51,11 +52,6 @@ const aboutSectionBtn = document.querySelector('.about-btn');
 const portfolioSectionBtn = document.querySelector('.portfolio-btn');
 const skillsSectionBtn = document.querySelector('.skills-btn');
 
-console.log(mainSection);
-console.log(aboutSection);
-console.log(portfolioSection);
-console.log(skillsSection);
-
 window.onscroll = function() {
   console.log(window.pageYOffset);
   if(window.pageYOffset < aboutSection.offsetTop) {
@@ -88,20 +84,7 @@ const hiddenMenuItems = Array.from(document.querySelectorAll('.m-menu-item'));
 //const hiddenMenuItemsArray = Array.from(hiddenMenuItems)
 let menuHidden = true;
 
-// const toggleMobileMenu = () => {
-//   const cssString = 'display: block; opacity: 1; transform: scale(1, 1); transition: all 0.4s;';
-//   const cssStringHide = 'display: none; opacity: 0; transform: scale(0, -1);';
-//   if(menuHidden) {
-//     menuHidden = false;
-//     hiddenMenu.style.cssText = cssString;
-//   } else {
-//     menuHidden = true;
-//     hiddenMenu.style.cssText = cssStringHide;
-//   }
-// }
-
-toggleButton.addEventListener('click', function(e) {
-  e.preventDefault();
+const toggleMobileMenu = () => {
   const cssString = 'display: block; opacity: 1; transform: scale(1, 1); transition: all 0.4s;';
   const cssStringHide = 'display: none; opacity: 0; transform: scale(0, -1);';
   if(menuHidden) {
@@ -111,19 +94,17 @@ toggleButton.addEventListener('click', function(e) {
     menuHidden = true;
     hiddenMenu.style.cssText = cssStringHide;
   }
+}
+
+toggleButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  toggleMobileMenu();
 });
 
 // Toggle function for the items
 hiddenMenuItems.forEach(function(element) {
   element.addEventListener('click', function() {
-    const cssString = 'display: block; opacity: 1; transform: scale(1, 1); transition: all 0.4s;';
-    const cssStringHide = 'display: none; opacity: 0; transform: scale(0, -1);';
-    if(menuHidden) {
-    menuHidden = false;
-    hiddenMenu.style.cssText = cssString;
-    } else {
-    menuHidden = true;
-    hiddenMenu.style.cssText = cssStringHide;
-  }
+    toggleMobileMenu();
   })
 });
+

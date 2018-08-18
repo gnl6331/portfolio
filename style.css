@@ -243,6 +243,11 @@ nav.container::after {
   overflow: hidden;
 }
 
+a.portfolio-card-inner {
+  display: block;
+  text-decoration: none;
+}
+
 .portfolio-card-inner {
   width: 100%;
   height: 100%;
@@ -405,6 +410,59 @@ nav.container::after {
   display: none;
 }
 
+.social-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.social-section h1 {
+  color: #293347;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  margin-top: 0;
+}
+
+.social-section p {
+  font-weight: 300;
+  color: #4a4a4a;
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.social-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-section li {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 0 30px;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+.social-section li a {
+  display: block;
+  text-decoration: none;
+  color: #293347;
+}
+
+.social-section li:hover {
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+}
+
+.social-section li p.social-chan-hidden-text {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
 /* making everything responsive */
 @media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
   .container {
